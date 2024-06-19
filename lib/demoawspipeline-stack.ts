@@ -5,7 +5,7 @@ import { CodePipeline, CodePipelineSource, ShellStep } from 'aws-cdk-lib/pipelin
 export class DemoawspipelineStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
-
+    
     // The code that defines your stack goes here
     //AWS CICD Pipeline
     const democicdpipeline = new CodePipeline(this, 'democicdpipeline', {
@@ -20,6 +20,5 @@ export class DemoawspipelineStack extends cdk.Stack {
         ],
       }),
     });
-    
   }
 }
